@@ -1,3 +1,19 @@
+mixin menu(className)
+	nav.nav
+		ul
+			li: a(href="#") Mercury
+			li: a(href="#") Venus
+			li: a(href="#") Earth
+			li: a(href="#") Mars
+
+mixin logo
+	.logo
+		.logo__sun
+		.logo__planet.logo__planet_mercury
+		.logo__planet.logo__planet_venus
+		.logo__planet.logo__planet_earth
+		.logo__planet.logo__planet_mars
+
 
 doctype html
 html(lang="ru")

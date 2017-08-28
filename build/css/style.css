@@ -23,7 +23,54 @@ html, #slides-container { -webkit-box-sizing: border-box; box-sizing: border-box
 
 body { font-family: "Roboto", sans-serif; font-size: 12px; line-height: 1.4; }
 
-html, #slides-container, body { width: 100%; height: 100%; }
+@-webkit-keyframes move-twink-back { from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; } }
+
+@keyframes move-twink-back { from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; } }
+@-webkit-keyframes move-clouds-back { from { background-position: 0 0; }
+  to { background-position: 10000px 0; } }
+@keyframes move-clouds-back { from { background-position: 0 0; }
+  to { background-position: 10000px 0; } }
+@-webkit-keyframes move-logo-planet { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes move-logo-planet { from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+.logo { position: absolute; right: 5%; top: 5%; }
+.logo__sun { background-image: url("../img/icons.png"); width: 28px; height: 28px; background-position: 0px 0px; }
+.logo__planet { border-radius: 50%; position: absolute; top: 50%; left: 50%; -webkit-animation: move-logo-planet infinite linear; animation: move-logo-planet infinite linear; }
+.logo__planet:after { display: block; content: ""; position: absolute; }
+.logo__planet_mercury { width: 40px; height: 40px; margin-left: -20px; margin-top: -20px; -webkit-animation-duration: 4s; animation-duration: 4s; }
+.logo__planet_mercury:after { background-image: url("../img/icons.png"); width: 10px; height: 10px; background-position: -34px -32px; left: 20%; top: 0; }
+.logo__planet_venus { width: 60px; height: 60px; margin-left: -30px; margin-top: -30px; -webkit-animation-duration: 5s; animation-duration: 5s; }
+.logo__planet_venus:after { right: 10%; top: 0; background-image: url("../img/icons.png"); width: 13px; height: 13px; background-position: -17px -32px; }
+.logo__planet_earth { width: 80px; height: 80px; margin-left: -40px; margin-top: -40px; -webkit-animation-duration: 6s; animation-duration: 6s; }
+.logo__planet_earth:after { background-image: url("../img/icons.png"); width: 13px; height: 13px; background-position: 0px -32px; left: 10%; bottom: 0; }
+.logo__planet_mars { -webkit-animation-duration: 7s; animation-duration: 7s; width: 100px; height: 100px; margin-left: -50px; margin-top: -50px; }
+.logo__planet_mars:after { right: 7%; bottom: 0; background-image: url("../img/icons.png"); width: 15px; height: 15px; background-position: -32px 0px; }
+
+.content { position: absolute; top: 15%; left: 5%; margin-right: 5%; *zoom: 1; }
+.content:after { content: " "; display: table; clear: both; }
+.content__intro { padding: 10px; border: 4px double lightcoral; }
+.content__intro p { color: white; font-size: 18px; text-shadow: 1px 1px 1px black; }
+.content__box { margin-top: 3%; }
+.content__text strong { display: block; font-size: 30px; }
+.content__text p { color: white; font-size: 15px; margin: 10px 0; }
+.content__main-img { float: left; margin-right: 2%; }
+
+.stars, .twinkling, .clouds { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; display: block; }
+
+.stars { background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center; z-index: 0; }
+
+.twinkling { background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center; z-index: 1; -webkit-animation: move-twink-back 200s linear infinite; animation: move-twink-back 200s linear infinite; }
+
+.clouds { background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center; z-index: 3; -webkit-animation: move-clouds-back 200s linear infinite; animation: move-clouds-back 200s linear infinite; }
+
+.nav { position: absolute; left: 5%; top: 5%; }
+.nav li { display: inline-block; margin: 0 10px; }
+.nav a { text-decoration: none; color: white; font-weight: bold; text-transform: uppercase; font-size: 20px; }
+
+html, #slides-container, body { width: 100%; height: 100%; min-width: 1200px; }
 
 #slides-container { overflow: hidden; }
 
@@ -31,6 +78,7 @@ html, #slides-container, body { width: 100%; height: 100%; }
 
 .slide { position: absolute; top: 0; left: 0; width: 50%; height: 50%; background-size: cover; }
 .slide__caption { position: absolute; bottom: 5%; right: 5%; text-align: right; color: white; }
+.slide__box { position: relative; z-index: 100; height: 100%; }
 
 #slide-1 { background: red; }
 

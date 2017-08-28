@@ -1,5 +1,9 @@
 extends _layout
 
+
+
+
+
 block title
 	title
 
@@ -17,24 +21,55 @@ block content
 
 				)
 				#slide-1.slide
-					.slide__caption(
-						data-40p="opacity: 1; transform:translate(0px,0px);"
-						data-70p="opacity: 0; transform:translate(0px,-100%);"
-						data-anchor-target="#helper"
-						)
+					.stars
+					.twinkling
+					.slide__box
+						+logo
+						+menu
+						.content
+							.content__intro
+								p Hello! My name is Anton and I`m frontend developer. Here I want to represent my pet-project called Four-4. It`s mini website, which is dedicated to the first 4 planets of Solar system. This site is the platform for testing very interesting javascript-scroll library ScrollR. Also I used here few css-animations and tested my design skills =P Hope you enjoy it. Have fun!
+							.content__box
+								img.content__main-img(src="img/mercury.png" alt="")
+								.content__text
+									strong(style="color: sandybrown") Mercury
+									p Mercury is the smallest and innermost planet in the Solar System. Its orbital period around the Sun of 88 days is the shortest of all the planets in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.
+									p Like Venus, Mercury orbits the Sun within Earth's orbit as an inferior planet, so it can only be seen visually in the morning or the evening sky, and never exceeds 28° away from the Sun. Also, like Venus and the Moon, the planet displays the complete range of phases as it moves around its orbit relative to Earth. Seen from Earth, this cycle of phases reoccurs approximately every 116 days, the so-called synodic period. Although Mercury can appear as a bright star-like object when viewed from Earth, its proximity to the Sun often makes it more difficult to see than Venus.
+									p Mercury is gravitationally locked with the Sun in a 3:2 spin-orbit resonance, and rotates in a way that is unique in the Solar System. As seen relative to the fixed stars, it rotates on its axis exactly three times for every two revolutions it makes around the Sun. As seen from the Sun, in a frame of reference that rotates with the orbital motion, it appears to rotate only once every two Mercurian years. An observer on Mercury would therefore see only one day every two years.
+									p Mercury's axis has the smallest tilt of any of the Solar System's planets (about  1⁄30 degree), and its orbital eccentricity is the largest of all known planets in the Solar System.[b] At aphelion, Mercury is about 1.5 times as far from the Sun as it is at perihelion. Mercury's surface appears heavily cratered and is similar in appearance to the Moon's, indicating that it has been geologically inactive for billions of years.
+						.slide__caption(
+							data-40p="opacity: 1; transform:translate(0px,0px);"
+							data-70p="opacity: 0; transform:translate(0px,-100%);"
+							data-anchor-target="#helper"
+							)
 
-						h1 Slide 1 title
-						p slide description
+							h1 Slide 1 title
+							p slide description
 				#slide-2.slide
-					.slide__caption(
-						data-130p="opacity: 0; transform:translate(0px,-200%);"
-						data-180p="opacity: 1; transform:translate(0px,0px);"
-						data-250p=""
-						data-280p="opacity: 0; transform:translate(-100px,0px);"
-						data-anchor-target="#helper"
-						)
-						h1 Slide 2 title
-						p slide description
+					.stars
+					.twinkling
+					.clouds
+					.slide__box
+						+logo
+						+menu
+						.content
+							.content__box
+								img.content__main-img(src="img/venus.png" alt="")
+								.content__text
+									strong(style="color: gold") Venus
+									p Venus is the second planet from the Sun, orbiting it every 224.7 Earth days.[12] It has the longest rotation period (243 days) of any planet in the Solar System and rotates in the opposite direction to most other planets. It has no natural satellites. It is named after the Roman goddess of love and beauty. It is the second-brightest natural object in the night sky after the Moon, reaching an apparent magnitude of −4.6 – bright enough to cast shadows at night and, rarely, visible to the naked eye in broad daylight.[13][14] Orbiting within Earth's orbit, Venus is an inferior planet and never appears to venture far from the Sun; its maximum angular distance from the Sun (elongation) is 47.8°.
+									p Venus is a terrestrial planet and is sometimes called Earth's "sister planet" because of their similar size, mass, proximity to the Sun, and bulk composition. It is radically different from Earth in other respects. It has the densest atmosphere of the four terrestrial planets, consisting of more than 96% carbon dioxide. The atmospheric pressure at the planet's surface is 92 times that of Earth, or roughly the pressure found 900 m (3,000 ft) underwater on Earth. Venus is by far the hottest planet in the Solar System, with a mean surface temperature of 735 K (462 °C; 863 °F), even though Mercury is closer to the Sun. Venus is shrouded by an opaque layer of highly reflective clouds of sulfuric acid, preventing its surface from being seen from space in visible light. It may have had water oceans in the past,[15][16] but these would have vaporized as the temperature rose due to a runaway greenhouse effect.[17] The water has probably photodissociated, and the free hydrogen has been swept into interplanetary space by the solar wind because of the lack of a planetary magnetic field.[18] Venus's surface is a dry desertscape interspersed with slab-like rocks and is periodically resurfaced by volcanism.
+									p As one of the brightest objects in the sky, Venus has been a major fixture in human culture for as long as records have existed. It has been made sacred to gods of many cultures, and has been a prime inspiration for writers and poets as the "morning star" and "evening star". Venus was the first planet to have its motions plotted across the sky, as early as the second millennium BC.
+
+						.slide__caption(
+							data-130p="opacity: 0; transform:translate(0px,-200%);"
+							data-180p="opacity: 1; transform:translate(0px,0px);"
+							data-250p=""
+							data-280p="opacity: 0; transform:translate(-100px,0px);"
+							data-anchor-target="#helper"
+							)
+							h1 Slide 2 title
+							p slide description
 				#slide-3.slide
 					.slide__caption(
 						data-250p="opacity: 0; transform:translate(300px,0px);"
